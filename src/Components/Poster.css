@@ -1,0 +1,43 @@
+.ContentTile {
+    user-select: none;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(242, 242, 242, 1);
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    position: relative;
+    display: inline-flex;
+    width: var(--tile-width);
+    height: var(--tile-height);
+    border-radius: var(--tile-border-radius);
+    color: #111111;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 300ms all;
+    transform-origin: center left;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    cursor: pointer;
+  }
+  
+  .ContentTile:hover,
+  .ContentTile:active {
+    transform: scale(var(--tile-scale));
+  }
+  
+  .ContentTile:hover ~ .ContentTile,
+  .ContentTile:active ~ .ContentTile {
+    transform: translate3d(var(--tile-translate-right), 0, 0);
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  
+  
+ 

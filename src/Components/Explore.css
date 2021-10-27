@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Explore {
+    margin-top: 40vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    z-index: 1;
+    margin: 0 auto;
+    overflow: auto;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1)
+    );
+  } 
+  
+  
+  .ContentRow {
+    padding-top: 40vh;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+
+  .ContentRow__Trending {
+    padding-top: 20vh;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+  
+  .ContentRow__title {
+    user-select: none;
+    padding-left: var(--content-margin-left);
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
+  }
+  
+  .ContentRow__items {
+    user-select: none;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    overflow: auto;
+    padding: calc((var(--tile-height) * 1.1 - var(--tile-height)) / 2) 0px;
+    margin: 10px 0;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    scrollbar-width: thin;
+    scrollbar-color: #333 rgba(242, 242, 242, 1);
+  }
+  
+  .ContentRow__items::-webkit-scrollbar {
+    width: 1px;
+    height: 2px;
+  }
+  .ContentRow__items::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .ContentRow__items::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 6px;
+  }
+  .ContentRow__items:hover::-webkit-scrollbar-thumb,
+  .ContentRow__items:active::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  .ContentRow__items:hover,
+  .ContentRow__items:active {
+    transform: translate3d(var(--tile-translate-left), 0, 0);
+  }
+  
+  .ContentRow__spacer:first-child {
+    width: var(--content-margin-left);
+  }
+  
+  .ContentRow__spacer:last-child {
+    width: calc(var(--content-margin-left) / 2 + var(--tile-translate-right));
+  }
+  
+  .ContentRow__spacer {
+    user-select: none;
+    scroll-snap-align: start;
+    width: 2rem;
+    margin-left: -1rem;
+    height: var(--content-tile-height);
+    display: inline-block;
+  }
