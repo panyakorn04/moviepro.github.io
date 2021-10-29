@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import Explore from "./Components/Explore";
 import Hero from "./Components/Hero";
+import Explore from "./Components/Explore";
+
 function App() {
   return (
     <>
